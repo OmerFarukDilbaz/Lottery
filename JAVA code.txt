@@ -1,0 +1,28 @@
+String piyango = "" + (int)(Math.random()*10) * (int)(Math.random()*10);
+
+     Scanner input = new Scanner(System.in);
+     System.out.print("Tahmin ettiğiniz iki rakamı girin : ");
+     String tahmin = input.nextLine();
+
+     char p1 = piyango.charAt(0);
+     char p2 = piyango.charAt(1);
+
+     char t1 = tahmin.charAt(0);
+     char t2 = tahmin.charAt(1);
+
+     System.out.println("Piyango numaraları" + piyango);
+
+     if (tahmin.equals(piyango)){
+        System.out.println("Ne şanslısın ama 10.000 $ kazandın!!! ");
+     }
+
+     else if (t2 == p1 && t1 == p2)
+            System.out.println("Ah be tam tersini yazsaydın keşke. Ama olsun 3.000$ kazandın.");
+
+
+     else if(t1 == p1 || t1 == p2 || t2 == p1 || t2 == p2 )
+            System.out.println("Yine iyisin 1.000 $ kazandın.");
+
+
+     else
+            System.out.println("Gukkii");
